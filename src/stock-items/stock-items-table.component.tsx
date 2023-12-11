@@ -28,6 +28,7 @@ import FilterStockItems from "./components/filter-stock-items/filter-stock-items
 import { launchAddOrEditDialog } from "./stock-item.utils";
 import { useStockItemsPages } from "./stock-items-table.resource";
 import styles from "./stock-items-table.scss";
+import AddStockItemsBulktImportActionButton from "./add-bulk-stock-item/add-stock-items-bulk-import-action-button.component";
 
 interface StockItemsTableProps {
   from?: string;
@@ -132,6 +133,7 @@ const StockItemsTableComponent: React.FC<StockItemsTableProps> = () => {
                   filterType={isDrug}
                   changeFilterType={setDrug}
                 />
+                <AddStockItemsBulktImportActionButton />
                 <AddStockItemActionButton />
               </TableToolbarContent>
             </TableToolbar>
@@ -195,7 +197,6 @@ const StockItemsTableComponent: React.FC<StockItemsTableProps> = () => {
                       {t("checkFilters", "Check the filters above")}
                     </p>
                   </div>
-                  <p className={styles.separator}>{t("or", "or")}</p>
                 </Tile>
               </div>
             ) : null}
