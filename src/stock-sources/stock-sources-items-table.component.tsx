@@ -164,7 +164,6 @@ function StockSourcesItems() {
                       {t("checkFilters", "Check the filters above")}
                     </p>
                   </div>
-                  <p className={styles.separator}>{t("or", "or")}</p>
                 </Tile>
               </div>
             ) : null}
